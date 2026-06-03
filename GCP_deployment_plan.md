@@ -10,16 +10,16 @@ This deployment plan outlines how to transition the `txt2sql` multi-agent projec
 graph TD
     User[End Users] -->|HTTP/HTTPS via Public IP| GlobalLB[GCP Global HTTP(S) Load Balancer]
     
-    subgraph GCP Environment
+    subgraph GCP_Environment [GCP Environment]
         GlobalLB -->|Routes Traffic| Frontend[Cloud Run: Streamlit Frontend]
         
         Frontend -->|Internal API Calls| Backend[Cloud Run: FastAPI Backend]
         
-        subgraph Managed Services
+        subgraph Managed_Services [Managed Services]
             Backend -->|VPC Peering/Private IP| CloudSQL[(Cloud SQL: PostgreSQL)]
         end
         
-        subgraph External LLM
+        subgraph External_LLM [External LLM]
             Backend -->|API Keys| Gemini[Google Gemini API]
         end
     end
