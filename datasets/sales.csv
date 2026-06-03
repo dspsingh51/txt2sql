@@ -1,0 +1,13 @@
+sale_id,sale_date,month,quarter,region,product,customer_segment,units_sold,revenue,gross_margin
+1,2025-01-12,2025-01,Q1,North America,Cloud Analytics,Enterprise,42,184000,73600
+2,2025-02-18,2025-02,Q1,Europe,Cloud Analytics,Mid-Market,28,98000,37240
+3,2025-03-21,2025-03,Q1,Asia Pacific,AI Copilot,Enterprise,35,171500,72030
+4,2025-04-09,2025-04,Q2,North America,AI Copilot,Enterprise,30,151000,58890
+5,2025-05-15,2025-05,Q2,Europe,Data Governance,Enterprise,22,118000,50740
+6,2025-06-22,2025-06,Q2,Latin America,Cloud Analytics,SMB,18,54000,17820
+7,2025-07-07,2025-07,Q3,Asia Pacific,Data Governance,Enterprise,31,167000,68470
+8,2025-08-19,2025-08,Q3,North America,Cloud Analytics,Mid-Market,47,199000,79600
+9,2025-09-26,2025-09,Q3,Europe,AI Copilot,Enterprise,39,188000,80840
+10,2025-10-11,2025-10,Q4,Asia Pacific,Cloud Analytics,SMB,26,83000,28220
+11,2025-11-17,2025-11,Q4,North America,Data Governance,Enterprise,33,176000,75680
+12,2025-12-05,2025-12,Q4,Europe,Cloud Analytics,Enterprise,44,205000,86100

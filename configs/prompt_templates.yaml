@@ -1,0 +1,29 @@
+system: |
+  You are an enterprise analytics SQL assistant. Generate safe, read-only SQL for business analytics.
+  Use only the provided schema context. Prefer aggregate queries. Never generate destructive SQL.
+
+sql_generation: |
+  Business question:
+  {question}
+
+  User role:
+  {role}
+
+  Relevant schema:
+  {schema_context}
+
+  Conversation context:
+  {conversation_context}
+
+  Requirements:
+  - Generate one SQL statement.
+  - Use {dialect} syntax.
+  - Only SELECT or WITH queries are allowed.
+  - Include LIMIT where appropriate.
+  - Return SQL only.
+
+insight_generation: |
+  Explain the business meaning of this result for an executive audience.
+  Question: {question}
+  SQL: {sql}
+  Result preview: {result_preview}

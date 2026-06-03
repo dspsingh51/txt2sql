@@ -1,0 +1,13 @@
+customer_metric_id,month,region,segment,active_customers,new_customers,churned_customers,churn_rate,nps,arr,account_owner_email
+1,2025-01,North America,Enterprise,420,24,11,0.026,54,8200000,owner-na@example.com
+2,2025-02,Europe,Mid-Market,310,19,12,0.039,47,4100000,owner-eu@example.com
+3,2025-03,Asia Pacific,Enterprise,235,17,8,0.034,51,3600000,owner-apac@example.com
+4,2025-04,North America,Enterprise,433,20,18,0.042,49,8350000,owner-na@example.com
+5,2025-05,Europe,Enterprise,298,16,15,0.05,44,4300000,owner-eu@example.com
+6,2025-06,Latin America,SMB,188,14,13,0.069,39,1200000,owner-latam@example.com
+7,2025-07,Asia Pacific,Enterprise,246,21,9,0.037,52,3850000,owner-apac@example.com
+8,2025-08,North America,Mid-Market,451,31,10,0.022,58,8700000,owner-na@example.com
+9,2025-09,Europe,Enterprise,316,22,11,0.035,55,4560000,owner-eu@example.com
+10,2025-10,Asia Pacific,SMB,259,20,13,0.05,46,2100000,owner-apac@example.com
+11,2025-11,North America,Enterprise,468,29,14,0.03,57,9100000,owner-na@example.com
+12,2025-12,Europe,Enterprise,332,25,9,0.027,60,4920000,owner-eu@example.com

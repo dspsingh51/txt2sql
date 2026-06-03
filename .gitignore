@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+*.log
+monitoring/audit.log
+datasets/enterprise_demo.db
+.streamlit/
+.DS_Store

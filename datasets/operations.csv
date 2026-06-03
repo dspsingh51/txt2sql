@@ -1,0 +1,13 @@
+operation_id,month,region,service_line,tickets,incidents,avg_resolution_hours,operational_expense
+1,2025-01,North America,Cloud Support,312,12,8.4,72000
+2,2025-02,Europe,Cloud Support,244,9,7.9,61000
+3,2025-03,Asia Pacific,Implementation,198,7,12.3,68000
+4,2025-04,North America,Implementation,287,15,13.8,82000
+5,2025-05,Europe,Cloud Support,265,10,8.1,66000
+6,2025-06,Latin America,Cloud Support,176,11,10.5,54000
+7,2025-07,Asia Pacific,Implementation,221,8,11.7,70000
+8,2025-08,North America,Cloud Support,336,14,8.9,76000
+9,2025-09,Europe,Implementation,208,6,10.2,64000
+10,2025-10,Asia Pacific,Cloud Support,233,9,9.4,69000
+11,2025-11,North America,Implementation,301,16,14.6,85000
+12,2025-12,Europe,Cloud Support,278,8,7.6,63000

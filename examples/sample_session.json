@@ -1,0 +1,9 @@
+{
+  "session_id": "portfolio-demo",
+  "question": "Show top 5 revenue generating regions",
+  "role": "analyst",
+  "sql": "SELECT region, ROUND(SUM(revenue), 2) AS total_revenue FROM sales GROUP BY region ORDER BY total_revenue DESC LIMIT 5;",
+  "validation_status": "approved",
+  "governance_status": "approved",
+  "summary": "Returned 4 row(s). The primary metric 'total_revenue' totals 1702500.0 with an average of 425625.0."
+}
