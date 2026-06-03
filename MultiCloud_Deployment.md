@@ -25,17 +25,17 @@ For AWS, the architecture relies heavily on **Elastic Container Service (ECS) wi
 graph TD
     User[End Users] -->|HTTPS| ALB[AWS Application Load Balancer]
     
-    subgraph AWS_VPC [AWS VPC Virtual Private Cloud]
+    subgraph AWS_VPC ["AWS VPC Virtual Private Cloud"]
         ALB -->|Routes Traffic| Frontend[ECS Fargate: Streamlit Frontend]
         
         Frontend -->|Internal API Calls| Backend[ECS Fargate: FastAPI Backend]
         
-        subgraph Private_Subnets [Private Subnets]
+        subgraph Private_Subnets ["Private Subnets"]
             Backend -->|VPC Peering| RDS[(Amazon RDS: PostgreSQL)]
             Backend -->|VPC Peering| Redis[(Amazon ElastiCache)]
         end
         
-        subgraph Enterprise_LLM_AWS [Enterprise LLM]
+        subgraph Enterprise_LLM_AWS ["Enterprise LLM"]
             Backend -->|IAM Authenticated| Bedrock[Amazon Bedrock API]
         end
     end
@@ -62,17 +62,17 @@ For Azure, the architecture utilizes **Azure Container Apps** for microservices 
 graph TD
     User[End Users] -->|HTTPS| AppGateway[Azure Application Gateway]
     
-    subgraph Azure_VNet [Azure Virtual Network VNet]
+    subgraph Azure_VNet ["Azure Virtual Network VNet"]
         AppGateway -->|Routes Traffic| Frontend[Azure Container Apps: Streamlit]
         
         Frontend -->|Internal API Calls| Backend[Azure Container Apps: FastAPI]
         
-        subgraph Private_Endpoints [Private Endpoints]
+        subgraph Private_Endpoints ["Private Endpoints"]
             Backend -->|VNet Integration| Postgres[(Azure DB for PostgreSQL)]
             Backend -->|VNet Integration| Redis[(Azure Cache for Redis)]
         end
         
-        subgraph Enterprise_LLM_Azure [Enterprise LLM]
+        subgraph Enterprise_LLM_Azure ["Enterprise LLM"]
             Backend -->|Private Link / RBAC| AzureOpenAI[Azure OpenAI Service]
         end
     end
