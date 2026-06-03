@@ -98,7 +98,10 @@ class SQLValidator:
 
     def _has_multiple_statements(self, sql: str) -> bool:
         if not sqlparse:
-            return sql.count(";") > 1
+            # Strip string literals before counting semicolons to avoid false positives
+            sql_no_strings = re.sub(r"'[^']*'", "", sql)
+            sql_no_strings = re.sub(r'"[^"]*"', "", sql_no_strings)
+            return sql_no_strings.count(";") > 1
         statements = [statement for statement in sqlparse.parse(sql) if statement.value.strip("; \n\t")]
         return len(statements) > 1
 

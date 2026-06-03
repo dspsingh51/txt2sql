@@ -14,11 +14,21 @@ class QueryExecutor:
 
     def execute(self, sql: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
         start = time.perf_counter()
-        with sqlite3.connect(self.db_path) as connection:
-            connection.row_factory = sqlite3.Row
-            cursor = connection.execute(sql)
-            rows = cursor.fetchmany(self.max_rows)
-            columns = [description[0] for description in cursor.description or []]
+        try:
+            with sqlite3.connect(self.db_path) as connection:
+                connection.row_factory = sqlite3.Row
+                cursor = connection.execute(sql)
+                rows = cursor.fetchmany(self.max_rows)
+                columns = [description[0] for description in cursor.description or []]
+        except sqlite3.Error as e:
+            elapsed_ms = round((time.perf_counter() - start) * 1000, 2)
+            return [], {
+                "elapsed_ms": elapsed_ms,
+                "row_count": 0,
+                "column_count": 0,
+                "columns": [],
+                "error": str(e)
+            }
         elapsed_ms = round((time.perf_counter() - start) * 1000, 2)
         records = [
             {
