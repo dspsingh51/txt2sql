@@ -8,7 +8,7 @@ This deployment plan outlines how to transition the `txt2sql` multi-agent projec
 
 ```mermaid
 graph TD
-    User[End Users] -->|HTTP/HTTPS via Public IP| GlobalLB[GCP Global HTTP(S) Load Balancer]
+    User[End Users] -->|HTTP/HTTPS via Public IP| GlobalLB["GCP Global HTTP(S) Load Balancer"]
     
     subgraph GCP_Environment ["GCP Environment"]
         GlobalLB -->|Routes Traffic| Frontend[Cloud Run: Streamlit Frontend]
